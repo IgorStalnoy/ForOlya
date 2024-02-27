@@ -1,6 +1,6 @@
-package org.example.Homework1_dataTypes_vars_operators_methods.Task1;
+package org.example.homework1.task1;
 
-public class Task1 {
+public class либо_main_либо_runner {
     //Вывести на экран значения переменных ниже
     public static void main(String[] args) {
         byte b = 0x55;
