@@ -1,6 +1,6 @@
 package org.example.homework1.task1;
 
-public class либо_main_либо_runner {
+public class Main {
     //Вывести на экран значения переменных ниже
     public static void main(String[] args) {
         byte b = 0x55;

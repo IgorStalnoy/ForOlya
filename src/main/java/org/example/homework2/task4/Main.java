@@ -5,21 +5,29 @@ package org.example.homework2.task4;
 import java.util.Scanner;
 
 public class Main {
+    public static final int DAYS_IN_MONTH = 30;
+    public static final int MONTHS_IN_YEAR = 12;
+    public static final int MAX_INT = 2147483646;
+
+    public static final String DAY_INPUT_TEXT = "Please input a day";
+    public static final String MONTH_INPUT_TEXT = "Please input a month";
+    public static final String YEAR_INPUT_TEXT = "Please input a year";
+
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        int day = dayInputScanner(scanner);
-        int month = monthInputScanner(scanner);
-        int year = yearInputScanner(scanner);
+        int day = Utils.dateInputScanning(scanner, DAY_INPUT_TEXT, DAYS_IN_MONTH);
+        int month = Utils.dateInputScanning(scanner, MONTH_INPUT_TEXT, MONTHS_IN_YEAR);
+        int year = Utils.dateInputScanning(scanner, YEAR_INPUT_TEXT, MAX_INT);
 
-        String nextDate = nextDayCalculator(day, month, year);
+        String nextDate = nextDayCalculating(day, month, year);
         System.out.println(nextDate);
     }
 
-    public static String nextDayCalculator(int day, int month, int year) {
-        if (day == 30) {
+    public static String nextDayCalculating(int day, int month, int year) {
+        if (day == DAYS_IN_MONTH) {
             day = 1;
-            if (month == 12) {
+            if (month == MONTHS_IN_YEAR) {
                 month = 1;
                 year++;
             } else {
@@ -29,69 +37,6 @@ public class Main {
             day++;
         }
         return "Next day's date is : " + day + "." + month + "." + year;
-    }
-
-    public static int dayInputScanner(Scanner scanner) {
-        int day = 0;
-        boolean validValue;
-        System.out.println("Please input a day");
-        do {
-            validValue = scanner.hasNextInt();
-            if (!validValue) {
-                System.out.println("Not a number, please input a number");
-                scanner.nextLine();
-            } else {
-                day = scanner.nextInt();
-                if (day > 30 || day < 1) {
-                    validValue = false;
-                    System.out.println("Number should be less then 31 and bigger then 0");
-                    scanner.nextLine();
-                }
-            }
-        } while (!validValue);
-        return day;
-    }
-
-    public static int monthInputScanner(Scanner scanner) {
-        int month = 0;
-        boolean validValue;
-        System.out.println("Please input a month");
-        do {
-            validValue = scanner.hasNextInt();
-            if (!validValue) {
-                System.out.println("Not a number, please input a number");
-                scanner.nextLine();
-            } else {
-                month = scanner.nextInt();
-                if (month > 12 || month < 1) {
-                    validValue = false;
-                    System.out.println("Number should be less then 13 and bigger then 0");
-                    scanner.nextLine();
-                }
-            }
-        } while (!validValue);
-        return month;
-    }
-
-    public static int yearInputScanner(Scanner scanner) {
-        int year = 0;
-        boolean validValue;
-        System.out.println("Please input a year");
-        do {
-            validValue = scanner.hasNextInt();
-            if (!validValue) {
-                System.out.println("Not a number, please input a number");
-                scanner.nextLine();
-            } else {
-                year = scanner.nextInt();
-                if (year < 1) {
-                    validValue = false;
-                    System.out.println("Number should be bigger then 0");
-                    scanner.nextLine();
-                }
-            }
-        } while (!validValue);
-        return year;
     }
 
 }
