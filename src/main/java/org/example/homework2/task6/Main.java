@@ -18,10 +18,10 @@ public class Main {
         tasksContainer.addTask(7, "Деградируем с заей");
 
         Scanner scanner = new Scanner(System.in);
-        schedulerTasksPrint(Utils.inputValuesScanning(scanner), tasksContainer);
+        printSchedulerTasks(Utils.inputValuesScan(scanner), tasksContainer);
 
     }
-    public static void schedulerTasksPrint(int dayNumber, TasksContainer tasksScheduler) {
+    public static void printSchedulerTasks(int dayNumber, TasksContainer tasksScheduler) {
         System.out.println("Tasks for " + DaysNames.getDay(dayNumber) + ":");
         System.out.println(tasksScheduler.getTasks(dayNumber));
     }

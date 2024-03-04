@@ -7,11 +7,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Sum of digits of " + NUMBER + " = " + calculatingSumOfDigits(NUMBER));
+        System.out.println("Sum of digits of " + NUMBER + " = " + calculateSumOfDigits(NUMBER));
 
     }
 
-    public static long calculatingSumOfDigits(long number) {
+    public static long calculateSumOfDigits(long number) {
         long sum = 0;
         if (number / 10 == 0) {
             return number % 10;

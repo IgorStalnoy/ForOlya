@@ -10,24 +10,24 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        int inputNumber = Utils.inputValueScanning(scanner);
+        int inputNumber = Utils.inputValueScan(scanner);
         System.out.println("Inputted value: " + inputNumber);
         System.out.println(convertNumberToAccountingForm(inputNumber));
 
     }
 
     public static String convertNumberToAccountingForm (int number) {
-        String numberAccountingForm = "";
+        StringBuilder numberAccountingForm = new StringBuilder();
         int digitsCount = 0;
         do {
             if(digitsCount == 3){
-                numberAccountingForm = " " + numberAccountingForm;
+                numberAccountingForm.insert(0, " ");
                 digitsCount = 0;
             }
-            numberAccountingForm = (number % 10) + numberAccountingForm;
+            numberAccountingForm.insert(0, (number % 10));
             digitsCount++;
             number = number / 10;
         } while (number != 0);
-            return numberAccountingForm;
+            return numberAccountingForm.toString();
     }
 }

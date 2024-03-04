@@ -9,11 +9,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println(multiplicationFromAndUntilInputtedNumbersCalculating(FIRST_NUMBER, LAST_NUMBER));
+        System.out.println(multiplicationFromAndUntilInputtedNumbers(FIRST_NUMBER, LAST_NUMBER));
 
     }
 
-    public static int multiplicationFromAndUntilInputtedNumbersCalculating(int firstNumber, int lastNumber) {
+    public static int multiplicationFromAndUntilInputtedNumbers(int firstNumber, int lastNumber) {
         int result = 1;
         do {
             result = result * firstNumber;

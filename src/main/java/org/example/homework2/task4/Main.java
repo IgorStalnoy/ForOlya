@@ -16,15 +16,15 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        int day = Utils.dateInputScanning(scanner, DAY_INPUT_TEXT, DAYS_IN_MONTH);
-        int month = Utils.dateInputScanning(scanner, MONTH_INPUT_TEXT, MONTHS_IN_YEAR);
-        int year = Utils.dateInputScanning(scanner, YEAR_INPUT_TEXT, MAX_INT);
+        int day = Utils.dateInputScan(scanner, DAY_INPUT_TEXT, DAYS_IN_MONTH);
+        int month = Utils.dateInputScan(scanner, MONTH_INPUT_TEXT, MONTHS_IN_YEAR);
+        int year = Utils.dateInputScan(scanner, YEAR_INPUT_TEXT, MAX_INT);
 
-        String nextDate = nextDayCalculating(day, month, year);
+        String nextDate = calculateNextDay(day, month, year);
         System.out.println(nextDate);
     }
 
-    public static String nextDayCalculating(int day, int month, int year) {
+    public static String calculateNextDay(int day, int month, int year) {
         if (day == DAYS_IN_MONTH) {
             day = 1;
             if (month == MONTHS_IN_YEAR) {

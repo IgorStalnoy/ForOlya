@@ -10,9 +10,9 @@ public class Main {
     public final static int DAYS_IN_WEEK =7;
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println(secondsToWeeksConverting(secondsInputScanning(in)));
+        System.out.println(convertSecondsToWeeks(secondsInputScan(in)));
     }
-    public static String secondsToWeeksConverting(int secondsTotal) {
+    public static String convertSecondsToWeeks(int secondsTotal) {
         int seconds = secondsTotal % SECONDS_IN_MINUTE;
         int minutesLeft = (secondsTotal - seconds) / SECONDS_IN_MINUTE;
         int minutes = minutesLeft % MINUTES_IN_HOUR;
@@ -23,7 +23,7 @@ public class Main {
         int weeks = (daysLeft - days) / DAYS_IN_WEEK;
         return "in " + secondsTotal + " seconds are : " + weeks + " weeks, " + days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds";
     }
-    public static int secondsInputScanning(Scanner scanner) {
+    public static int secondsInputScan(Scanner scanner) {
         int seconds = 0;
         boolean validValue;
         System.out.println("Please, input number of seconds: ");

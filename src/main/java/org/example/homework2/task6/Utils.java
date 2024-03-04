@@ -3,7 +3,7 @@ package org.example.homework2.task6;
 import java.util.Scanner;
 
 public class Utils {
-    public static int inputValuesScanning(Scanner scanner) {
+    public static int inputValuesScan(Scanner scanner) {
         int dayNumber = 0;
         boolean validValue;
         System.out.println("Please enter a day number");

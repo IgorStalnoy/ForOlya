@@ -3,7 +3,7 @@ package org.example.homework2.task5;
 import java.util.Scanner;
 
 public class Utils {
-    public static int inputValuesScanning(Scanner scanner, String side) {
+    public static int inputValuesScan(Scanner scanner, String side) {
         int sideLength = 0;
         boolean validValue;
         System.out.println("Please input length of side " + side);

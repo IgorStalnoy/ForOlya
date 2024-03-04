@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Utils {
 
-    public static int dateInputScanning(Scanner scanner, String dateInputText, int dateMaxNumber) {
+    public static int dateInputScan(Scanner scanner, String dateInputText, int dateMaxNumber) {
         int dateNumber = 0;
         boolean validValue;
         System.out.println(dateInputText);

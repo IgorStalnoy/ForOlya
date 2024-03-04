@@ -7,11 +7,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        printFactorialCalculating(MAX_NUMBER_FACTORIAL);
+        printFactorialCalculation(MAX_NUMBER_FACTORIAL);
 
     }
 
-    public static void printFactorialCalculating (int maxNumberFactorial) {
+    public static void printFactorialCalculation (int maxNumberFactorial) {
         int number = 0;
         while (number <= maxNumberFactorial) {
             int i = 1;

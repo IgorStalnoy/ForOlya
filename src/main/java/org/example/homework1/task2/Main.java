@@ -8,10 +8,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println(sumOfSumAndMultiplicationCalculating(FIRST_NUMBER, SECOND_NUMBER));
+        System.out.println(calculateSumOfSumAndMultiplication(FIRST_NUMBER, SECOND_NUMBER));
     }
 
-    public static int sumOfSumAndMultiplicationCalculating(int a, int b) {
+    public static int calculateSumOfSumAndMultiplication(int a, int b) {
         return (a + b) + (a * b);
     }
 }

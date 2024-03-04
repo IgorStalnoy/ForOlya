@@ -10,11 +10,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        divisionOnSevenPrinting(FIRST_NUMBER, LAST_NUMBER, TEXT);
+        printTextOfDivisionOnSevenNumbers(FIRST_NUMBER, LAST_NUMBER, TEXT);
 
     }
 
-    public static void divisionOnSevenPrinting (int firstNumber, int lastNumber, String printingText) {
+    public static void printTextOfDivisionOnSevenNumbers (int firstNumber, int lastNumber, String printingText) {
         for (;firstNumber <= lastNumber;firstNumber++) {
             if (firstNumber % 7 == 0) {
                 System.out.println("Number " + firstNumber + " - " + printingText);

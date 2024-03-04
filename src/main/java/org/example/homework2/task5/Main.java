@@ -9,20 +9,20 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        int a = Utils.inputValuesScanning(scanner, "a");
-        int b = Utils.inputValuesScanning(scanner, "b");
-        int c = Utils.inputValuesScanning(scanner, "c");
-        int d = Utils.inputValuesScanning(scanner, "d");
-        int e = Utils.inputValuesScanning(scanner, "e");
-        int f = Utils.inputValuesScanning(scanner, "f");
-        if (buildingPlacementValidating(a, b, c, d, e, f)) {
+        int a = Utils.inputValuesScan(scanner, "a");
+        int b = Utils.inputValuesScan(scanner, "b");
+        int c = Utils.inputValuesScan(scanner, "c");
+        int d = Utils.inputValuesScan(scanner, "d");
+        int e = Utils.inputValuesScan(scanner, "e");
+        int f = Utils.inputValuesScan(scanner, "f");
+        if (isBuildingPlacementPossible(a, b, c, d, e, f)) {
             System.out.println("Buildings can be placed into the area");
         } else {
             System.out.println("Buildings can not be placed into the area");
         }
     }
 
-    public static boolean buildingPlacementValidating(int a, int b, int c, int d, int e, int f) {
+    public static boolean isBuildingPlacementPossible(int a, int b, int c, int d, int e, int f) {
         return (a + c <= e && b + d <= f) || (a + d <= e && b + c <= f) || (b + d <= e && a + c <= f) || (b + c <= e && a + d <= f);
     }
 
