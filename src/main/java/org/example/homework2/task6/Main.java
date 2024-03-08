@@ -3,6 +3,8 @@ package org.example.homework2.task6;
 //Написать метод, который выводит расписание на неделю.
 // Задать на вход в метод порядковый номер дня недели и отобразить на экране то, что запланировано на этот день.
 
+import org.example.homework2.homework2utils.Utils;
+
 import java.util.Scanner;
 
 public class Main {
@@ -18,7 +20,7 @@ public class Main {
         tasksContainer.addTask(7, "Деградируем с заей");
 
         Scanner scanner = new Scanner(System.in);
-        printSchedulerTasks(Utils.inputValuesScan(scanner), tasksContainer);
+        printSchedulerTasks(Utils.inputDaysScan(scanner), tasksContainer);
 
     }
     public static void printSchedulerTasks(int dayNumber, TasksContainer tasksScheduler) {

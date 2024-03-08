@@ -1,4 +1,4 @@
-package org.example.homework4;
+package org.example.homework4.Utils;
 
 public class Utils {
 

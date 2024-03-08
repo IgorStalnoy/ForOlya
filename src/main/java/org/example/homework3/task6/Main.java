@@ -3,6 +3,7 @@ package org.example.homework3.task6;
 //Задать произвольное целое число и вывести его в бухгалтерском формате, то есть, начиная справа, каждые три позиции отделяются пробелом.
 //Например, число 20023143 должно быть выведено как 20 023 143
 
+import org.example.homework3.utils.Utils;
 import java.util.Scanner;
 
 public class Main {

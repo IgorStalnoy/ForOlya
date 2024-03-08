@@ -4,8 +4,8 @@ package org.example.homework3.task2;
 
 public class Main {
 
-    public static final int FIRST_NUMBER = 1;
-    public static final int LAST_NUMBER = 25;
+    public static final long FIRST_NUMBER = 1L;
+    public static final long LAST_NUMBER = 25L;
 
     public static void main(String[] args) {
 
@@ -13,13 +13,14 @@ public class Main {
 
     }
 
-    public static int multiplicationFromAndUntilInputtedNumbers(int firstNumber, int lastNumber) {
-        int result = 1;
+    public static long multiplicationFromAndUntilInputtedNumbers(long firstNumber, long lastNumber) {
+        long result = 1L;
         do {
             result = result * firstNumber;
             firstNumber++;
         } while (firstNumber <= lastNumber);
         return result;
     }
+
 
 }

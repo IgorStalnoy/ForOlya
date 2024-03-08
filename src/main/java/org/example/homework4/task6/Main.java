@@ -4,7 +4,7 @@ package org.example.homework4.task6;
 
 public class Main {
 
-    public static final int ARRAY_LENGTH = 11;
+    public static final int ARRAY_LENGTH = 6;
 
     public static void main(String[] args) {
         int[][] matrix = new int[ARRAY_LENGTH][ARRAY_LENGTH];

@@ -15,11 +15,12 @@ public class Main {
     }
 
     public static void printTextOfDivisionOnSevenNumbers (int firstNumber, int lastNumber, String printingText) {
-        for (;firstNumber <= lastNumber;firstNumber++) {
+        do {
             if (firstNumber % 7 == 0) {
                 System.out.println("Number " + firstNumber + " - " + printingText);
             }
-        }
+            firstNumber++;
+        } while (firstNumber <= lastNumber);
     }
 
 }

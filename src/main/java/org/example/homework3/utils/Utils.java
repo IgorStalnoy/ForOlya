@@ -1,4 +1,4 @@
-package org.example.homework3.task6;
+package org.example.homework3.utils;
 
 import java.util.Scanner;
 
@@ -6,7 +6,7 @@ public class Utils {
     public static int inputValueScan(Scanner scanner) {
         int inputNumber = 0;
         boolean validValue;
-        System.out.println("Please input a number");
+        System.out.println("Please input a sum to withdraw");
         do {
             validValue = scanner.hasNextInt();
             if (!validValue) {

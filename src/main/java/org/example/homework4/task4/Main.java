@@ -4,7 +4,7 @@ package org.example.homework4.task4;
 //Определите сумму элементов массива, расположенных между минимальным и максимальным значениями.
 //Если значений максимальных и минимальных несколько, то необходимо взять максимальное значение разницы индексов между максимальным и минимальным значениями.
 
-import org.example.homework4.Utils;
+import org.example.homework4.Utils.Utils;
 
 public class Main {
     public static int ARRAY_LENGTH = 10;
@@ -20,7 +20,7 @@ public class Main {
     public static void printSumOfMaxAndMinArrayIndexes(int[] array) {
         int minValue = array[0];
         int[] minValueIndexes = new int[array.length];
-        int minValueIndexesPosition = 0;
+        int minValuePosition = 0;
         int minValuesCount = 0;
         int maxValue = array[0];
         int[] maxValueIndexes = new int[array.length];
@@ -41,8 +41,8 @@ public class Main {
                 maxValuesCount++;
             }
             if (array[i] == minValue) {
-                minValueIndexes[minValueIndexesPosition] = i;
-                minValueIndexesPosition++;
+                minValueIndexes[minValuePosition] = i;
+                minValuePosition++;
                 minValuesCount++;
             }
         }

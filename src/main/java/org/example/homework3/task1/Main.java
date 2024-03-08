@@ -11,16 +11,12 @@ public class Main {
 
     }
 
-    public static void printFactorialCalculation (int maxNumberFactorial) {
-        int number = 0;
+    public static void printFactorialCalculation(int maxNumberFactorial) {
+        int number = 1;
+        System.out.println("0! = 1");
         while (number <= maxNumberFactorial) {
             int i = 1;
             int factorial = 1;
-            if (number == 0) {
-                System.out.println(number + "! = 1");
-                number++;
-                continue;
-            }
             while (i <= number) {
                 factorial = factorial * i;
                 i++;

@@ -10,10 +10,10 @@ public class Main {
         Scanner in = new Scanner(System.in);
         System.out.print("Please, input a money sum: ");
         int sum = in.nextInt();
-        System.out.println(sum + GenerateCorrectCaseOfRoubleCurrency(sum));
+        System.out.println(sum + generateCorrectCaseOfRoubleCurrency(sum));
     }
 
-    public static String GenerateCorrectCaseOfRoubleCurrency(int sum) {
+    public static String generateCorrectCaseOfRoubleCurrency(int sum) {
         if (sum % 10 == 0 || sum % 100 >= 5 && sum % 100 <= 20 || sum % 10 >= 5) {
             return " рублей";
         } else if (sum % 10 == 1) {

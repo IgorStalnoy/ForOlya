@@ -2,6 +2,8 @@ package org.example.homework2.task4;
 
 //Задать три числа - день, месяц, год. Вывести на экран в виде трёх чисел дату следующего дня.
 
+import org.example.homework2.homework2utils.Utils;
+
 import java.util.Scanner;
 
 public class Main {
