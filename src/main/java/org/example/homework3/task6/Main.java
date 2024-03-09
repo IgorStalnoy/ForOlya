@@ -4,6 +4,7 @@ package org.example.homework3.task6;
 //Например, число 20023143 должно быть выведено как 20 023 143
 
 import org.example.homework3.utils.Utils;
+
 import java.util.Scanner;
 
 public class Main {
@@ -17,18 +18,12 @@ public class Main {
 
     }
 
-    public static String convertNumberToAccountingForm (int number) {
+    public static String convertNumberToAccountingForm(int number) {
         StringBuilder numberAccountingForm = new StringBuilder();
-        int digitsCount = 0;
-        do {
-            if(digitsCount == 3){
-                numberAccountingForm.insert(0, " ");
-                digitsCount = 0;
-            }
-            numberAccountingForm.insert(0, (number % 10));
-            digitsCount++;
-            number = number / 10;
-        } while (number != 0);
-            return numberAccountingForm.toString();
+        while (number != 0) {
+            numberAccountingForm.insert(0, number % 1000 + " ");
+            number = number / 1000;
+        }
+        return numberAccountingForm.toString();
     }
 }

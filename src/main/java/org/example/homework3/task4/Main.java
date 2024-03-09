@@ -10,33 +10,29 @@ public class Main {
     public static void main(String[] args) {
 
         int secondSimpleNumber = findSecondSimpleNumberInInterval(FIRST_NUMBER, SECOND_NUMBER);
-        if (secondSimpleNumber == 0) {
-            System.out.println("There are no two simple number in interval");
-        } else {
-            System.out.println("Second simple numbers in interval is " + secondSimpleNumber);
-        }
+        System.out.println(secondSimpleNumber == 0 ? "There are no two simple number in interval" : "Second simple numbers in interval is " + secondSimpleNumber);
 
     }
 
     public static int findSecondSimpleNumberInInterval(int firstNumber, int secondNumber) {
-        boolean isSecondSimpleNumberFound = false;
-        int secondSimpleNumber = 0;
-        for (;firstNumber <= secondNumber; firstNumber++) {
+        boolean isFirstResultFound = false;
+        int result = 0;
+        while (firstNumber <= secondNumber) {
             for (int i = 2; i <= firstNumber; i++) {
-                if (i == firstNumber && !isSecondSimpleNumberFound) {
-                    isSecondSimpleNumberFound = true;
+                if (i == firstNumber && !isFirstResultFound) {
+                    isFirstResultFound = true;
                     break;
                 }
                 if (i == firstNumber) {
-                    secondSimpleNumber = firstNumber;
-                    return secondSimpleNumber;
+                    return firstNumber;
                 }
                 if (firstNumber % i == 0) {
                     break;
                 }
             }
+            firstNumber++;
         }
-        return secondSimpleNumber;
+        return result;
     }
 
 }

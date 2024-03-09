@@ -132,6 +132,12 @@ public class CashDispenser {
                     banknotesTwenty = banknotesTwenty + banknotesTwentyToWithdraw;
                     banknotesTwentyToWithdraw = 0;
                 }
+                if (banknotesHundredToWithdraw == 0 && banknotesFiftyToWithdraw == 0) {
+                    if (isThisValidation) {
+                        banknotesTwenty += banknotesTwentyToWithdraw;
+                    }
+                    return withdrewBanknotes;
+                }
             }
         } while (sum != 0);
         return withdrewBanknotes;
@@ -142,15 +148,15 @@ public class CashDispenser {
     }
 
     public void addBanknotesTwenty(int banknotesTwenty) {
-        this.banknotesTwenty = banknotesTwenty + this.banknotesTwenty;
+        this.banknotesTwenty += banknotesTwenty;
     }
 
     public void addBanknotesFifty(int banknotesFifty) {
-        this.banknotesFifty = banknotesFifty + this.banknotesFifty;
+        this.banknotesFifty += banknotesFifty;
     }
 
     public void addBanknotesOneHundred(int banknotesOneHundred) {
-        this.banknotesOneHundred = banknotesOneHundred + this.banknotesOneHundred;
+        this.banknotesOneHundred += banknotesOneHundred;
     }
 
     public int getBanknotesTwenty() {

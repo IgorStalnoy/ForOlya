@@ -10,15 +10,15 @@ public class TimeLine {
 
 
     public TimeLine(int hours, int minutes, int seconds) {
-        if (seconds > 60) {
-            this.seconds = seconds % 60;
-            minutes = minutes + seconds / 60;
+        if (seconds > SECONDS_IN_MINUTE) {
+            this.seconds = seconds % SECONDS_IN_MINUTE;
+            minutes = minutes + seconds / SECONDS_IN_MINUTE;
         } else {
             this.seconds = seconds;
         }
-        if (minutes > 60) {
-            this.minutes = minutes % 60;
-            hours = hours + minutes / 60;
+        if (minutes > MINUTES_IN_HOUR) {
+            this.minutes = minutes % MINUTES_IN_HOUR;
+            hours = hours + minutes / MINUTES_IN_HOUR;
         } else {
             this.minutes = minutes;
         }

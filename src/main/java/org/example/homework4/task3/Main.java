@@ -12,11 +12,11 @@ public class Main {
 
         int[] array = new int[ARRAY_LENGTH];
         Utils.fillArrayWithRandomNumbers(array);
-        printArrayMaxNumberIndex(array);
+        printIndexOfMaxEl(array);
 
     }
 
-    public static void printArrayMaxNumberIndex(int[] array) {
+    public static void printIndexOfMaxEl(int[] array) {
         int maxNumberIndex = 0;
         int maxNumber = array[0];
         for (int i = 0;i < array.length;i++) {
