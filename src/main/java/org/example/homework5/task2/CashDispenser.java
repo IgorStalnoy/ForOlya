@@ -132,12 +132,12 @@ public class CashDispenser {
                     banknotesTwenty = banknotesTwenty + banknotesTwentyToWithdraw;
                     banknotesTwentyToWithdraw = 0;
                 }
-                if (banknotesHundredToWithdraw == 0 && banknotesFiftyToWithdraw == 0) {
-                    if (isThisValidation) {
-                        banknotesTwenty += banknotesTwentyToWithdraw;
-                    }
-                    return withdrewBanknotes;
-                }
+//                if (banknotesHundredToWithdraw == 0 && banknotesFiftyToWithdraw == 0) {   // недоделанное условие выходап из цикла
+//                    if (isThisValidation) {
+//                        banknotesTwenty += banknotesTwentyToWithdraw;
+//                    }
+//                    return withdrewBanknotes;
+//                }
             }
         } while (sum != 0);
         return withdrewBanknotes;

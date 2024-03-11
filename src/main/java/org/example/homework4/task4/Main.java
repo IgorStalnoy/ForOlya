@@ -4,7 +4,7 @@ package org.example.homework4.task4;
 //Определите сумму элементов массива, расположенных между минимальным и максимальным значениями.
 //Если значений максимальных и минимальных несколько, то необходимо взять максимальное значение разницы индексов между максимальным и минимальным значениями.
 
-import org.example.homework4.Utils.Utils;
+import org.example.homework4.utils.Utils;
 
 public class Main {
     public static int ARRAY_LENGTH = 10;

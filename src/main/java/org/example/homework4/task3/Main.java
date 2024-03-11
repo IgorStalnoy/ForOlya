@@ -3,7 +3,7 @@ package org.example.homework4.task3;
 //Создайте переменную для массива из 10 элементов. Заполните его произвольными значениями целочисленного типа.
 //Найдите максимальный элемент и выведите его индекс.
 
-import org.example.homework4.Utils.Utils;
+import org.example.homework4.utils.Utils;
 
 public class Main {
     public static int ARRAY_LENGTH = 10;

@@ -3,7 +3,7 @@ package org.example.homework4.task5;
 //Создайте переменную для массива из 10 элементов. Заполните его произвольными значениями целочисленного типа. Выведите на экран, переверните и снова
 //выведите на экран(при переворачивании нежелательно создавать ещё один массив).
 
-import org.example.homework4.Utils.Utils;
+import org.example.homework4.utils.Utils;
 
 public class Main {
 

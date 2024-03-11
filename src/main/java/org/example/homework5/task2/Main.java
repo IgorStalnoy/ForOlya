@@ -13,9 +13,9 @@ public class Main {
 
         CashDispenser cashDispenser = new CashDispenser(0, 0, 0);
         Scanner scanner = new Scanner(System.in);
-        cashDispenser.addBanknotesTwenty(10);
-        cashDispenser.addBanknotesFifty(10);
-        cashDispenser.addBanknotesOneHundred(10);
+        cashDispenser.addBanknotesTwenty(4);
+        cashDispenser.addBanknotesFifty(100);
+        cashDispenser.addBanknotesOneHundred(0);
         System.out.println("Total balance : " + cashDispenser.getTotalBalance());
         System.out.println("100$ banknotes left : " + cashDispenser.getBanknotesOneHundred());
         System.out.println("50$ banknotes left : " + cashDispenser.getBanknotesFifty());
@@ -25,6 +25,5 @@ public class Main {
         System.out.println("100$ banknotes left : " + cashDispenser.getBanknotesOneHundred());
         System.out.println("50$ banknotes left : " + cashDispenser.getBanknotesFifty());
         System.out.println("20$ banknotes left : " + cashDispenser.getBanknotesTwenty() + " ");
-
     }
 }
