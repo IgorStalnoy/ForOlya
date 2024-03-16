@@ -33,7 +33,7 @@ public class Main {
         employees.add(accountant);
         employees.add(caster);
         employees.add(millingOperator);
-        employees.forEach(e -> e.calculateSalary(factory.getMonthlyRevenue(), factory.getMonthlyHoursWorkedRate()));
+        employees.forEach(e -> SalaryCalc.calculateSalary(e, factory));
         employees.forEach(e -> System.out.println(e.getBalance() + " " + e.getClass().getSimpleName()));
 
     }

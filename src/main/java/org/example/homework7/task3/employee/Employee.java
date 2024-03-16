@@ -3,8 +3,8 @@ package org.example.homework7.task3.employee;
 public abstract class Employee {
 
     private float balance;
-    private boolean isPercentSalaryAvailable;
-    private boolean isHourlySalaryAvailable;
+    private final boolean isPercentSalaryAvailable;
+    private final boolean isHourlySalaryAvailable;
     private int percentage;
     private int hourlyRate;
 
@@ -13,16 +13,6 @@ public abstract class Employee {
         this.balance = 0;
         this.isPercentSalaryAvailable = isPercentSalaryAvailable;
         this.isHourlySalaryAvailable = isHourlySalaryAvailable;
-    }
-
-    public void calculateSalary(int revenue, int hoursWorked) {
-        if (isHourlySalaryAvailable && isPercentSalaryAvailable) {
-            balance += (float) ((revenue * percentage / 100) + (hourlyRate * hoursWorked));
-        } else if (isPercentSalaryAvailable) {
-            balance += (float) (revenue * percentage / 100);
-        } else {
-            balance += hourlyRate * hoursWorked;
-        }
     }
 
     public void setPercentage(int percentage) {
@@ -37,4 +27,23 @@ public abstract class Employee {
         return balance;
     }
 
+    public boolean isPercentSalaryAvailable() {
+        return isPercentSalaryAvailable;
+    }
+
+    public boolean isHourlySalaryAvailable() {
+        return isHourlySalaryAvailable;
+    }
+
+    public int getPercentage() {
+        return percentage;
+    }
+
+    public int getHourlyRate() {
+        return hourlyRate;
+    }
+
+    public void setBalance(float balance) {
+        this.balance = balance;
+    }
 }
