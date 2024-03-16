@@ -12,13 +12,14 @@ import java.util.regex.Pattern;
 
 public class Main {
 
-    public final static Pattern PUNCTUATION_MARKS_PATTERN = Pattern.compile(("\\p{P}"));
+    public final static String PUNCTUATION_MARKS_PATTERN = "\\p{P}";
 
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
         String text = Utils.consoleScanner(scanner);
-        Matcher matcher = PUNCTUATION_MARKS_PATTERN.matcher(text);
+        Pattern pattern = Pattern.compile(PUNCTUATION_MARKS_PATTERN);
+        Matcher matcher = pattern.matcher(text);
         int count = 0;
         while (matcher.find()) {
             System.out.print(matcher.group() + " ");

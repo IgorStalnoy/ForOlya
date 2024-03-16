@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
 
 public class Main {
 
-    public static final Pattern HEXADECIMAL_NUMBERS_PATTERN = Pattern.compile("0x[\\dabcdefABCDEF]+");
+    public static final String HEXADECIMAL_NUMBERS_PATTERN = "0[xX]([a-fA-F0-9]{6}|[a-fA-F0-9]{3})\\b";
 
     public static void main(String[] args) {
 
@@ -26,7 +26,8 @@ public class Main {
 
     public static String findHexadecimal(String text) {
         StringBuilder result = new StringBuilder();
-        Matcher matcher = HEXADECIMAL_NUMBERS_PATTERN.matcher(text);
+        Pattern pattern = Pattern.compile(HEXADECIMAL_NUMBERS_PATTERN);
+        Matcher matcher = pattern.matcher(text);
         while (matcher.find()) {
             result.append(matcher.group()).append(" ");
         }

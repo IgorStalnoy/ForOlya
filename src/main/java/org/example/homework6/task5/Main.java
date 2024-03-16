@@ -13,6 +13,8 @@ public class Main {
 
     public static final String OPEN_TAG_PATTERN = "<p.{1,10}\">";
     public static final String CLOSE_TAG_PATTERN = "<\\\\.{1,10}>";
+    public static final String OPEN_TAG = "<p>";
+    public static final String CLOSE_TAG = "<\\\\p>";
 
     public static void main(String[] args) {
 
@@ -23,7 +25,7 @@ public class Main {
     }
 
     public static String tagReplace(String text) {
-        return text.replaceAll(OPEN_TAG_PATTERN, "<p>").replaceAll(CLOSE_TAG_PATTERN, "<\\\\p>");
+        return text.replaceAll(OPEN_TAG_PATTERN, OPEN_TAG).replaceAll(CLOSE_TAG_PATTERN, CLOSE_TAG);
     }
 
 }

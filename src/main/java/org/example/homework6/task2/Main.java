@@ -13,13 +13,14 @@ import java.util.regex.Pattern;
 
 public class Main {
 
-    public static Pattern WORDS_COUNT_PATTERN = Pattern.compile("(\\w+'\\w)|(\\w+)");
+    public final static String WORDS_COUNT_PATTERN = "(\\w+'\\w)|(\\w+)";
 
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
         String text = Utils.consoleScanner(scanner);
-        Matcher matcher = WORDS_COUNT_PATTERN.matcher(text);
+        Pattern pattern = Pattern.compile(WORDS_COUNT_PATTERN);
+        Matcher matcher = pattern.matcher(text);
         int count = 0;
         System.out.println();
         while (matcher.find()) {

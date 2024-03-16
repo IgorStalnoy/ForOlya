@@ -11,13 +11,14 @@ import java.util.regex.Pattern;
 
 public class Main {
 
-    public static Pattern LAST_LETTERS_PATTERN = Pattern.compile("\\w\\b");
+    public final static String LAST_LETTERS_PATTERN = "\\w\\b";
 
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
         String text = Utils.consoleScanner(scanner);
-        Matcher matcher = LAST_LETTERS_PATTERN.matcher(text);
+        Pattern pattern = Pattern.compile(LAST_LETTERS_PATTERN);
+        Matcher matcher = pattern.matcher(text);
         while (matcher.find()) {
             System.out.print(matcher.group() + " ");
         }
