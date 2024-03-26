@@ -3,8 +3,8 @@ package org.example.homework7.task3.employee;
 public abstract class Employee {
 
     private float balance;
-    private final boolean isPercentSalaryAvailable;
-    private final boolean isHourlySalaryAvailable;
+    private boolean isPercentSalaryAvailable;
+    private boolean isHourlySalaryAvailable;
     private int percentage;
     private int hourlyRate;
 
@@ -46,4 +46,5 @@ public abstract class Employee {
     public void setBalance(float balance) {
         this.balance = balance;
     }
+
 }

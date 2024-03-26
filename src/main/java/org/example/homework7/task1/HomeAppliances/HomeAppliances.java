@@ -10,12 +10,8 @@ public abstract class HomeAppliances {
         this.isPluggedIn = false;
     }
 
-    public void setPluggedIn() {
-        isPluggedIn = true;
-    }
-
-    public void setPluggedOff() {
-        isPluggedIn = false;
+    public void changeState() {
+        isPluggedIn = !isPluggedIn;
     }
 
 

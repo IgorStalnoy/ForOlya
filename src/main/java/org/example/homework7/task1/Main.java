@@ -22,10 +22,10 @@ public class Main {
         Toaster toaster = new Toaster(200, false, 2);
         Iron iron = new Iron(90, false, 300);
         VacuumCleaner vacuumCleaner = new VacuumCleaner(400, false, 1000);
-        mixer.setPluggedIn();
-        iron.setPluggedIn();
-        hairDryer.setPluggedIn();
-        iron.setPluggedOff();
+        mixer.changeState();
+        iron.changeState();
+        hairDryer.changeState();
+        iron.changeState();
 
 
     }
