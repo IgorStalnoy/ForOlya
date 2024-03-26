@@ -18,7 +18,7 @@ public enum SeasonsOfYear {
     }
 
     public static void printNextSeason(String inputSeason) {
-        var season = validateSeason(inputSeason);
+        var season = convertStringToEnum(inputSeason);
         switch (season.ordinal()) {
             case 0 -> System.out.println(SPRING + " is next season");
             case 1 -> System.out.println(SUMMER + " is next season");
@@ -29,10 +29,10 @@ public enum SeasonsOfYear {
     }
 
     public static void printSeasonCountOfDays(String inputSeason) {
-        System.out.println(validateSeason(inputSeason).countOfDays + " days in " + inputSeason);
+        System.out.println(convertStringToEnum(inputSeason).countOfDays + " days in " + inputSeason);
     }
 
-    private static SeasonsOfYear validateSeason(String inputSeason) {
+    private static SeasonsOfYear convertStringToEnum(String inputSeason) {
         return Arrays.stream(SeasonsOfYear.values()).filter(x -> x.toString().
                 equalsIgnoreCase(inputSeason)).findAny().get();          //хз как Optional разрешать
     }
